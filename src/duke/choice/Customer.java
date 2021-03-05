@@ -7,7 +7,7 @@ package duke.choice;
 
 /**
  *
- * @author emerson.pereira
+ * @author Emerson Pereira da Silva
  */
 public class Customer {
     String name;
