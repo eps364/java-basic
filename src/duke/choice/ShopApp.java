@@ -18,8 +18,7 @@ public class ShopApp {
         //System.out.println("HelloWorld!");
         double tax = 0.2;
         double total = 0;
-        
-        
+       
         Customer c1= new Customer();
         c1.name = "Pinky";
         c1.size = "S";
@@ -37,6 +36,8 @@ public class ShopApp {
         
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
+       
+        Clothing[] itens  = {item1, item2};
         
         item1.description = "Blue Jacket";
         item1.price = 20.9;        
@@ -49,10 +50,22 @@ public class ShopApp {
         System.out.println("Nome: " + c1.name);
         System.out.println("Size: " + c1.size);
         
-        System.out.println(item1.description +";"+ item1.price+";"+item1.size);
-        System.out.println(item2.description +";"+ item2.price+";"+item2.size);
-        
-        total = ((item1.price * tax)+item1.price) + ((item2.price * tax)+item2.price);
+//        System.out.println(item1.description +";"+ item1.price+";"+item1.size);
+//        System.out.println(item2.description +";"+ item2.price+";"+item2.size);
+
+// Example for com break or continue       
+//        int[] sizes = {4,18,5,20};
+//        for (int size: sizes){
+//            //if(size > 16 ) break;
+//            if(size > 16 ) continue;
+//            System.out.println("Size: "+ size + ",");
+//        }
+
+//        total = ((item1.price * tax)+item1.price) + ((item2.price * tax)+item2.price);
+        for(Clothing item:itens){
+            total += item.price * (1 + tax);
+            System.out.println(item.description +";"+ item.price+";"+item.size);
+        }
         System.out.println("Total: "+ total);
         
         int measurement = 10;
@@ -78,6 +91,9 @@ public class ShopApp {
         }
         
         System.out.println("Size of measurement: " + c1.size);
+        
+
+        
     }
     
 }
