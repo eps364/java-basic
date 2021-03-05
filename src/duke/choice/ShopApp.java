@@ -36,7 +36,7 @@ public class ShopApp {
         Clothing item2 = new Clothing();
         Clothing item3 = new Clothing();
 
-        Clothing[] itens = {item1, item2, item3};
+        Clothing[] itens = {item1, item2, new Clothing(), new Clothing()};
 
         item1.description = "Blue Jacket";
         item1.price = 20.9;
@@ -46,9 +46,13 @@ public class ShopApp {
         item2.price = 10.5;
         item2.size = "S";
 
-        item3.description = "Green Scarf";
-        item3.price = 5;
-        item3.size = "S";
+        itens[2].description = "Green Scarf";
+        itens[2].price = 5;
+        itens[2].size = "S";
+        
+        itens[3].description = "Blue T-Shirt";
+        itens[3].price = 10.5;
+        itens[3].size = "S";
 
         System.out.println("Nome: " + c1.name);
         System.out.println("Size: " + c1.size);
@@ -67,7 +71,7 @@ public class ShopApp {
             if (item.size.equals(c1.size)) {
                 total += (item.price * tax) + item.price;
                 System.out.println(item.description + ";" + item.price + ";" + item.size);
-                if (total > 16) {
+                if (total > 15) {
                     break;
                 }
             }
