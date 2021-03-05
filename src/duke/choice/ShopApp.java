@@ -16,6 +16,9 @@ public class ShopApp {
      */
     public static void main(String[] args) {
         //System.out.println("HelloWorld!");
+        double tax = 0.2;
+        double total = 0;
+        
         Customer c1= new Customer();
         c1.name = "Pinky";
         System.out.println("Nome: " + c1.name);
@@ -33,6 +36,10 @@ public class ShopApp {
         
         System.out.println(item1.description +";"+ item1.price+";"+item1.size);
         System.out.println(item2.description +";"+ item2.price+";"+item2.size);
+        
+        total = ((item1.price * tax)+item1.price) + ((item2.price * tax)+item2.price);
+        
+        System.out.println("Total: "+ total);
     }
     
 }
