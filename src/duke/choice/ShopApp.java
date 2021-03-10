@@ -15,7 +15,7 @@ public class ShopApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //System.out.println("HelloWorld!");
+        System.out.println("Welcome to Duke Choice Shop\n");
         double tax = 0.2;
         double total = 0;
 
@@ -70,7 +70,7 @@ public class ShopApp {
         for (Clothing item : itens) {
             if (item.getSize().equals(c1.getSize())) {
                 total += item.getPrice();
-                System.out.println(item.getDescription() + ";" + item.getPrice() + ";" + item.getSize());
+                System.out.println("Item: " + item.getDescription() + ";" + item.getPrice() + ";" + item.getSize());
                 if (total > 15) {
                     break;
                 }
