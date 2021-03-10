@@ -25,9 +25,7 @@ public class Customer {
         return size;
     }
 
-    public void setSize(int size){
-        int measurement = size;
-
+    public void setSize(int measurement){
         switch (measurement) {
             case 1:
             case 2:
