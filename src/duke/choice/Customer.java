@@ -5,13 +5,33 @@
  */
 package duke.choice;
 
+import java.util.Iterator;
+
 /**
  *
  * @author Emerson Pereira da Silva
  */
 public class Customer {
+
     private String name;
     private String size;
+    private Clothing[] items;
+
+    public void addItems(Clothing[] items) {
+        this.items = items;
+    }
+
+    public Clothing[] getItems() {
+        return items;
+    }
+
+    public double getTotalClothongCost() {
+        double total=0;
+        for (Clothing item : items) {
+                total += item.getPrice();
+        }
+        return total;
+    }
 
     public String getName() {
         return name;
@@ -25,7 +45,7 @@ public class Customer {
         return size;
     }
 
-    public void setSize(int measurement){
+    public void setSize(int measurement) {
         switch (measurement) {
             case 1:
             case 2:
@@ -46,11 +66,13 @@ public class Customer {
                 setSize("X");
         }
     }
-    
+
     public void setSize(String size) {
         this.size = size;
     }
-    
-    
+
+    void addItems(Clothing item1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
