@@ -9,7 +9,7 @@ package duke.choice;
  *
  * @author emerson.pereira
  */
-public class Clothing {
+public class Clothing implements Comparable<Clothing>{
     public final static double MIN_PRICE = 10;
     public final static double TAX_RATE = 0.2;
     
@@ -51,5 +51,12 @@ public class Clothing {
     public String toString(){
         return getDescription() + "," + getSize() + ", "+ getPrice();
     }
+
+    @Override
+    public int compareTo(Clothing o) {
+        return this.description.compareTo(o.description);
+    }
+
+
     
 }

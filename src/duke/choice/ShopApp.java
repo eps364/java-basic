@@ -5,6 +5,8 @@
  */
 package duke.choice;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Emerson Pereira da Silva
@@ -27,12 +29,15 @@ public class ShopApp {
         Clothing item4 = new Clothing("Blue T-Shirt",10.5,"S");
 
         Clothing[] items = {item1, item2, item3, item4};
+        
 
         c1.addItems(items);
+        Arrays.sort(c1.getItems());
 
         System.out.println("Nome: " + c1.getName());
         System.out.println("Size: " + c1.getSize());
         System.out.println("Size of measurement: " + c1.getSize()+"\n");
+        
         for (Clothing item : c1.getItems()) {
             System.out.println("Item: " + item);
         }
