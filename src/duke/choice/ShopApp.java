@@ -18,37 +18,17 @@ public class ShopApp {
         System.out.println("Welcome to Duke Choice Shop\n");
         double tax = 0.2;
         double total = 0;
-        int measurement = 3;
 
-        Customer c1 = new Customer();
-        c1.setName("Pinky");
-        c1.setSize("S");
+        Customer c1 = new Customer("Pinky",3);
 
-        Clothing item1 = new Clothing();
-        Clothing item2 = new Clothing();
-        Clothing item3 = new Clothing();
-        Clothing item4 = new Clothing();
+        Clothing item1 = new Clothing("Blue Jacket",20.9,"M");
+        Clothing item2 = new Clothing("Orange T-Shirt",10.5,"S");
+        Clothing item3 = new Clothing("Green Scarf",5,"S");
+        Clothing item4 = new Clothing("Blue T-Shirt",10.5,"S");
 
         Clothing[] items = {item1, item2, item3, item4};
 
-        item1.setDescription("Blue Jacket");
-        item1.setPrice(20.9);
-        item1.setSize("M");
-
-        item2.setDescription("Orange T-Shirt");
-        item2.setPrice(10.5);
-        item2.setSize("S");
-
-        item3.setDescription("Green Scarf");
-        item3.setPrice(5);
-        item3.setSize("S");
-
-        item4.setDescription("Blue T-Shirt");
-        item4.setPrice(10.5);
-        item4.setSize("S");
-
         c1.addItems(items);
-        c1.setSize(measurement);
 
         System.out.println("Nome: " + c1.getName());
         System.out.println("Size: " + c1.getSize());
