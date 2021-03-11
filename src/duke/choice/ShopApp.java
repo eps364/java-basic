@@ -34,7 +34,7 @@ public class ShopApp {
         System.out.println("Size: " + c1.getSize());
         System.out.println("Size of measurement: " + c1.getSize()+"\n");
         for (Clothing item : c1.getItems()) {
-            System.out.println("Item: " + item.toString());
+            System.out.println("Item: " + item);
         }
 
         System.out.println("\nTotal: " + c1.getTotalClothongCost());
