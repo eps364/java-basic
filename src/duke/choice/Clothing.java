@@ -10,8 +10,8 @@ package duke.choice;
  * @author emerson.pereira
  */
 public class Clothing {
-    private final double MIN_PRICE = 10;
-    private final double MIN_TAX = 0.2;
+    public final static double MIN_PRICE = 10;
+    public final static double TAX_RATE = 0.2;
     
     private String description;
     private double price;
@@ -32,7 +32,7 @@ public class Clothing {
     }
 
     public double getPrice() {
-        return price + (price * MIN_TAX);
+        return price + (price * TAX_RATE);
     }
 
     public void setPrice(double price) {
