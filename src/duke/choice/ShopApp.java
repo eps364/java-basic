@@ -17,7 +17,7 @@ public class ShopApp {
     public static void main(String[] args) {
         System.out.println("Welcome to Duke Choice Shop\n");
 
-        Customer c1 = new Customer("Pinky",3);
+        Customer c1 = new Customer("Pinky",14);
         System.out.println("Min Price: "+ Clothing.MIN_PRICE);
         System.out.println("Tax Rate: "+ Clothing.TAX_RATE);
 
@@ -38,6 +38,8 @@ public class ShopApp {
         }
 
         System.out.println("\nTotal: " + c1.getTotalClothongCost());
+        System.out.println("Average price: " + c1.averagePrice(c1.getSize()));
+        
         
 
     }

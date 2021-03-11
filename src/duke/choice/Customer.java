@@ -16,12 +16,29 @@ public class Customer {
     private String name;
     private String size;
     private Clothing[] items;
-  
+
     public Customer(String name, int measurement) {
         this.name = name;
         setSize(measurement);
     }
-    
+
+    public double averagePrice(String size) {
+        double average = 0;
+        int count = 0;
+        for (Clothing item : items) {
+            if (item.getSize().equals(size)) {
+                average += item.getPrice();
+                count++;
+            }
+        }
+        try {
+            average = count == 0? 0: average /count;
+        } catch (ArithmeticException e) {
+            System.out.println("Error Arithmetic: " + e);
+        } 
+        return average;
+    }
+
     public void addItems(Clothing[] items) {
         this.items = items;
     }
@@ -31,9 +48,9 @@ public class Customer {
     }
 
     public double getTotalClothongCost() {
-        double total=0;
+        double total = 0;
         for (Clothing item : items) {
-                total += item.getPrice();
+            total += item.getPrice();
         }
         return total;
     }
