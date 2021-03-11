@@ -1,6 +1,7 @@
 build/
 nbproject/
 test/
+temp/
 build.xml
 manifest.mf
 
