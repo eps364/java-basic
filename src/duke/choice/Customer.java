@@ -32,10 +32,10 @@ public class Customer {
             }
         }
         try {
-            average = count == 0? 0: average /count;
+            average = count == 0 ? 0 : average / count;
         } catch (ArithmeticException e) {
             System.out.println("Error Arithmetic: " + e);
-        } 
+        }
         return average;
     }
 
